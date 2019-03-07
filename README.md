@@ -114,7 +114,7 @@ Use annotation  **@EnableFeignClients**.
 
 Let's see class **PersonCallerFeignCtrl**
 
-```
+```Java
 @RestController
 public class PersonCallerFeignCtrl {
 
@@ -143,7 +143,7 @@ How is it done? This is the way:
 The method _findAll_ returns the result of the _persons_ method of instance **proxy**.
 
 Looking at class **ResponderProxy** 
-```
+```Java
 @FeignClient(name="RESPONDER" )
 @RibbonClient(name="RESPONDER")
 public interface ResponderProxy {
